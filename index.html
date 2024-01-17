@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+
+        .loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader::after {
+            content: '';
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border-top: 10px solid red;
+            border-bottom: 10px solid white;
+            border-left: 10px solid white;
+            border-right: 10px solid white;
+            animation: loader 1s linear infinite;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader" id="none">
+
+    </div>
+    <h2>najnfajnufwn</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, optio ab veritatis voluptatibus odio
+        consequuntur quos iure ex a maxime, suscipit, qui quidem odit. Sint optio amet repellendus praesentium doloribus
+        in nulla natus rem nobis obcaecati animi asperiores ut tempore facere perspiciatis culpa molestias, quod,
+        cumque, quas quasi! Totam delectus quasi iure obcaecati nisi accusantium quod fugiat amet saepe fuga quos eum
+        autem possimus consequatur atque ex, quibusdam ipsam voluptate recusandae harum quisquam nihil. A iure accusamus
+        dolorem fuga illo corporis, quo, culpa at fugiat totam dignissimos laudantium quos explicabo, amet deleniti
+        debitis laboriosam. Accusantium quae quibusdam hic magni tempora laboriosam, aperiam amet, suscipit nesciunt
+        omnis eligendi, illum esse et magnam pariatur nisi nulla autem dolorem fuga voluptatibus tempore repellendus.
+        Culpa reiciendis doloremque alias, sequi aliquam saepe fugiat repellat officia aut molestias deleniti
+        perspiciatis, error, aspernatur quibusdam voluptate molestiae? Iure distinctio assumenda vitae molestiae ipsa
+        amet, delectus animi doloremque harum quis tempore omnis nemo possimus dolores rerum inventore atque aliquid
+        adipisci earum laborum libero, at a in! Ducimus explicabo itaque facere praesentium alias, harum aut rerum, quas
+        cumque corrupti suscipit! Molestias fuga reiciendis quis corrupti quae quibusdam iusto velit. Ex quo
+        reprehenderit provident rem maiores nam! Quas natus dicta cum?</p>
+
+
+    <script>
+        document.body.classList.add("overflow_hidden");
+        setTimeout(() => {
+            document.getElementById("none").style.display = "none";
+            document.body.classList.remove("overflow_hidden");
+
+        }, 2000);
+    </script>
+</body>
+
+</html>
